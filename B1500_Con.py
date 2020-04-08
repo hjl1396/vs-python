@@ -40,10 +40,10 @@ print("(若对应参数无需修改输入0)")
 
 inp_data1=[350,46.293,24.0348,7.703,164.93,r'C:\Users\haojilong\Desktop\O1\RX',7.5214e15,r'JL1']
 
-inp_data = list(map(input().split()))
+inp_data = input().split()
 
 for i in range(0, len(inp_data)):
-    if(inp_data[i]!=0):
+    if(inp_data[i]!='0'):
         inp_data1[i]=inp_data[i]
 
 for i in range(0, len(inp_data1)):
