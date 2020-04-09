@@ -26,7 +26,7 @@ def write_excel_Matrix(value,name_sheet,path):
     print("数据存储成功！")
 
 def add_excel_Matrix(value,num_index,name_sheet,path):
-    wb1 = openpyxl.Workbook()
+    wb1 = openpyxl.load_workbook(path)
     sheet=wb1.create_sheet(name_sheet)   
     for r in range(0, len(value[:,1])-1):
         for c in range(0, len(value[1,:])-1):
