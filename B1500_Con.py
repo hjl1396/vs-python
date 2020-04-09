@@ -86,8 +86,12 @@ X_C_Data=X_Data-w_Data*LS+1/Cox/w_Data
 C_Data=-X_C_Data/(w_Data*(R_C_Data*R_C_Data+X_C_Data*X_C_Data))/Pad_Area
 Gp_w=R_C_Data/(R_C_Data*R_C_Data+X_C_Data*X_C_Data)/w_Data/Pad_Area
 
-plt.plot(Fre_Data,C_Data)
+fig1 = plt.figure(1)
 
-plt.plot(Fre_Data,Gp_w)
+ax1 = fig1.add_subplot(121)
+ax1.loglog(Fre_Data,C_Data)
+
+ax2 = fig1.add_subplot(122)
+ax2.loglog(Fre_Data,Gp_w)
 
 plt.show()
