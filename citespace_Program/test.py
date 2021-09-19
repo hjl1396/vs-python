@@ -11,9 +11,9 @@ matrix4=[[1332,646],[1465,646]]
 
 time.sleep(10)
 
-num=1740
+num=1
 
-for k in range(17):
+for k in range(28):
 
     for i in range(len(matrix1)):
         pyautogui.click(x=matrix1[i][0],y=matrix1[i][1],button='left',duration=0.25)
@@ -32,3 +32,24 @@ for k in range(17):
         pyautogui.click(x=matrix3[i][0],y=matrix3[i][1],button='left',duration=0.25)
         time.sleep(1)
     time.sleep(20)
+
+num_0=num+(k+1)*500
+num_1=452
+i=0
+for i in range(len(matrix1)):
+    pyautogui.click(x=matrix1[i][0],y=matrix1[i][1],button='left',duration=0.25)
+    time.sleep(1)
+i=0
+for i in range(len(matrix2)):
+    pyautogui.click(x=matrix2[i][0],y=matrix2[i][1],button='left',duration=0.25)
+    pyautogui.typewrite(['backspace','backspace','backspace','backspace','backspace','backspace','backspace'])
+    pyperclip.copy(num_0+i*num_1)  # 先复制
+    pyautogui.hotkey('ctrl','v')# 再粘贴
+    #pyautogui.typewrite(str(num+k*500+i*499))
+    time.sleep(1)
+pyautogui.click(x=matrix4[i][0],y=matrix4[i][1],button='left',duration=0.25)
+i=0
+for i in range(len(matrix3)):
+    pyautogui.click(x=matrix3[i][0],y=matrix3[i][1],button='left',duration=0.25)
+    time.sleep(1)
+time.sleep(20)
