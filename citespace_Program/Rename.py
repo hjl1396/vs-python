@@ -4,7 +4,7 @@ import sys
 
 def add_mark():
   pre = input("请输入需要添加的前缀:")
-  mark = "[%s]"%pre
+  mark = "%s"%pre
   old_names= os.listdir()
   for old_name in old_names:
     if old_name != sys.argv[0]:
